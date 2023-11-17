@@ -1,17 +1,16 @@
 class Solution {
     public int smallestEqual(int[] nums) {
-        int r=0;       
+        int r=-1;       
         for(int i=0; i<nums.length;i++)
         {
             if(i%10==nums[i])
-            return i;
-            else
             {
-                r=1;
+                r=i;
+                break;
             }
+            
+            
         }
-        if(r==1)
-        return -1;
-        else return 0;
+        return r;
     }
 }
